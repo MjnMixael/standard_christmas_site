@@ -6,7 +6,9 @@
 <title>Holiday Harmonies 2026 | Central Standard &amp; Vocal Standard</title>
 <meta name="description" content="Central Standard and Vocal Standard present Holiday Harmonies, an a cappella holiday show. Saturday, December 12, 2026 at the Folly Theater in Kansas City. 2:30 PM &amp; 7:00 PM. Get tickets at standardchristmas.com.">
 <link rel="canonical" href="https://standardchristmas.com/">
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <meta name="theme-color" content="#2b362e">
 
 <!-- Link previews (Facebook, iMessage, etc.) -->
@@ -131,29 +133,35 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero { position: relative; background: var(--green-deep); padding: 30px 16px 44px; text-align: center; overflow: hidden; }
-  .hero::before {
-    content: ""; position: absolute; inset: 0;
-    background: url("img/snowflakes.png") center top / cover no-repeat;
-    opacity: .22; pointer-events: none;
-  }
+  .hero { position: relative; background: var(--green-deep); padding: 20px 16px 26px; text-align: center; overflow: hidden; }
   .frame {
-    position: relative;
+    position: relative; overflow: hidden;
     max-width: var(--maxw); margin: 0 auto;
     border: 1.5px solid rgba(241,230,216,.45);
     border-radius: 10px;
-    padding: 34px 22px 30px;
-    background: linear-gradient(180deg, rgba(43,54,46,.35), rgba(34,43,37,.55));
+    padding: 26px 22px 22px;
+    background: linear-gradient(180deg, rgba(43,54,46,.3), rgba(34,43,37,.45));
   }
+  .frame > *:not(.snow) { position: relative; z-index: 1; }
+  /* Scattered background snowflakes */
+  .snow { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  .snow img { position: absolute; filter: brightness(1.75); opacity: .5; }
+  .snow .s1 { top: -22px;  left: -26px; width: 168px; opacity: .55; }
+  .snow .s2 { top: 14px;   right: -22px; width: 124px; opacity: .45; }
+  .snow .s3 { top: 44%;    left: -34px; width: 104px; opacity: .4; }
+  .snow .s4 { top: 52%;    right: 2%;   width: 78px;  opacity: .32; }
+  .snow .s5 { bottom: -18px; left: 10%; width: 92px;  opacity: .4; }
+  .snow .s6 { bottom: 4px;  right: -28px; width: 150px; opacity: .5; }
+
   .hero .wordmark {
-    display: block; width: min(560px, 86%); height: auto; margin: 14px auto 2px;
+    display: block; width: min(560px, 90%); height: auto; margin: 4px auto 0;
     filter: drop-shadow(0 6px 18px rgba(0,0,0,.45));
   }
-  .hero .swag { display: block; width: min(640px, 100%); height: auto; margin: 6px auto 20px; }
+  .hero .swag { display: block; width: min(560px, 96%); height: auto; margin: -26px auto 0; }
 
   .factline {
     display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center;
-    gap: 8px 18px; margin: 4px auto 26px; color: var(--cream);
+    gap: 8px 18px; margin: -14px auto 22px; color: var(--cream);
   }
   .factline .f { font-family: "Cormorant SC", Georgia, serif; font-weight: 600; font-size: clamp(1.05rem, 3.4vw, 1.5rem); letter-spacing: .03em; white-space: nowrap; }
   .factline .dot { color: var(--sage); font-size: 1.1rem; }
@@ -192,6 +200,8 @@
 
   .toy { background: var(--green); border: 1px solid var(--green-line); border-radius: 14px; padding: 26px 24px; max-width: 680px; margin: 0 auto; text-align: center; }
   .toy h2 { margin-top: 0; }
+  .toy-badge { width: 136px; height: auto; display: block; margin: 0 auto 10px; }
+  .toy .pill { margin-top: 18px; }
 
   .venue { text-align: center; }
   .venue .addr { font-size: 1.15rem; line-height: 1.5; }
@@ -204,12 +214,12 @@
 
   .choruses { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
   .chorus { background: var(--green); border: 1px solid var(--green-line); border-radius: 14px; padding: 26px 22px; text-align: center; }
-  .chip {
-    width: 150px; height: 104px; margin: 0 auto 16px; border-radius: 12px;
-    background: var(--cream); display: flex; align-items: center; justify-content: center; padding: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,.28);
+  .logo-box { height: 104px; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; }
+  .logo-box img {
+    max-height: 104px; max-width: 78%; width: auto; height: auto; display: block;
+    filter: drop-shadow(0 3px 9px rgba(0,0,0,.5));
   }
-  .chip img { max-width: 100%; max-height: 100%; height: auto; display: block; }
+  .logo-box .vs { max-height: 76px; }
   .chorus h3 { font-family: "Cormorant SC", Georgia, serif; font-weight: 700; font-size: 1.5rem; margin: 0 0 8px; }
   .chorus p { color: var(--cream-dim); margin: 0 0 16px; }
   .chorus .pill { font-size: .9rem; padding: 8px 18px; }
@@ -241,6 +251,14 @@
 <!-- ===== BEFORE THE SHOW ===== -->
 <header class="hero before">
   <div class="frame">
+    <div class="snow" aria-hidden="true">
+      <img class="s1" src="img/snowflake.png" alt="">
+      <img class="s2" src="img/snowflake.png" alt="">
+      <img class="s3" src="img/snowflake.png" alt="">
+      <img class="s4" src="img/snowflake.png" alt="">
+      <img class="s5" src="img/snowflake.png" alt="">
+      <img class="s6" src="img/snowflake.png" alt="">
+    </div>
     <p class="eyebrow">Vocal Standard &amp; Central Standard present</p>
     <img class="wordmark" src="img/wordmark.png" width="1200" height="811"
          alt="Holiday Harmonies — An A Cappella Show">
@@ -292,8 +310,10 @@
 
     <section>
       <div class="toy">
+        <img class="toy-badge" src="img/holiday-hero.png" width="596" height="714" alt="Become a KVC Holiday Hero">
         <h2>Bring a toy, brighten a holiday</h2>
         <p>We're collecting new, unwrapped toys in their original packaging for <strong>KVC's Holiday Heroes</strong> toy drive. Bring one with you and drop it off when you arrive.</p>
+        <a class="pill" href="https://www.kvc.org/getinvolved/holidayhero/">About KVC Holiday Heroes</a>
       </div>
     </section>
 
@@ -317,13 +337,13 @@
       <p class="lead">Two choruses, one stage &mdash; sisters in song.</p>
       <div class="choruses">
         <div class="chorus">
-          <div class="chip"><img src="img/cs-logo.png" width="429" height="546" alt="Central Standard logo"></div>
+          <div class="logo-box"><img src="img/cs-logo.png" width="429" height="546" alt="Central Standard logo"></div>
           <h3>Central Standard</h3>
           <p>Kansas City's six-time international medalist men's barbershop chorus.</p>
           <a class="pill" href="https://centralstandard.net">Visit centralstandard.net</a>
         </div>
         <div class="chorus">
-          <div class="chip"><img src="img/vs-logo.png" width="305" height="160" alt="Vocal Standard logo"></div>
+          <div class="logo-box"><img class="vs" src="img/vs-logo.png" width="305" height="160" alt="Vocal Standard logo"></div>
           <h3>Vocal Standard</h3>
           <p>A Sweet Adelines International women's chorus and 7th&#8209;place international medalist &mdash; Central Standard's sister chorus.</p>
           <a class="pill" href="https://www.vocalstandard.com">Visit vocalstandard.com</a>
