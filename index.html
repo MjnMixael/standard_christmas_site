@@ -133,35 +133,33 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero { position: relative; background: var(--green-deep); padding: 20px 16px 26px; text-align: center; overflow: hidden; }
-  .frame {
-    position: relative; overflow: hidden;
-    max-width: var(--maxw); margin: 0 auto;
-    border: 1.5px solid rgba(241,230,216,.45);
-    border-radius: 10px;
-    padding: 26px 22px 22px;
-    background: linear-gradient(180deg, rgba(43,54,46,.3), rgba(34,43,37,.45));
-  }
-  .frame > *:not(.snow) { position: relative; z-index: 1; }
-  /* Scattered background snowflakes */
+  .hero { position: relative; background: var(--green-deep); padding: 28px 16px 32px; text-align: center; overflow: hidden; }
+  .hero-inner { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; }
+  /* Full-width scattered background snowflakes */
   .snow { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-  .snow img { position: absolute; filter: brightness(1.75); opacity: .5; }
-  .snow .s1 { top: -22px;  left: -26px; width: 168px; opacity: .55; }
-  .snow .s2 { top: 14px;   right: -22px; width: 124px; opacity: .45; }
-  .snow .s3 { top: 44%;    left: -34px; width: 104px; opacity: .4; }
-  .snow .s4 { top: 52%;    right: 2%;   width: 78px;  opacity: .32; }
-  .snow .s5 { bottom: -18px; left: 10%; width: 92px;  opacity: .4; }
-  .snow .s6 { bottom: 4px;  right: -28px; width: 150px; opacity: .5; }
+  .snow img { position: absolute; filter: brightness(1.75); opacity: .48; }
+  .snow .s1 { top: -24px;    left: 2%;    width: 150px; opacity: .5; }
+  .snow .s2 { top: 10px;     right: 2%;   width: 150px; opacity: .5; }
+  .snow .s3 { top: 32%;      left: 11%;   width: 108px; opacity: .4; }
+  .snow .s4 { top: 42%;      right: 12%;  width: 96px;  opacity: .36; }
+  .snow .s5 { bottom: 2%;    left: 4%;    width: 128px; opacity: .46; }
+  .snow .s6 { bottom: -20px; right: 5%;   width: 120px; opacity: .42; }
+  .snow .s7 { top: 4%;       left: 31%;   width: 72px;  opacity: .24; }
+  .snow .s8 { bottom: 8%;    right: 33%;  width: 84px;  opacity: .26; }
+  @media (min-width: 760px) {
+    .snow .s1 { left: 5%; }  .snow .s2 { right: 5%; }
+    .snow .s3 { left: 17%; } .snow .s4 { right: 18%; }
+  }
 
   .hero .wordmark {
-    display: block; width: min(560px, 90%); height: auto; margin: 4px auto 0;
+    display: block; width: min(440px, 86%); height: auto; margin: 2px auto 0;
     filter: drop-shadow(0 6px 18px rgba(0,0,0,.45));
   }
-  .hero .swag { display: block; width: min(560px, 96%); height: auto; margin: -26px auto 0; }
+  .hero .swag { display: block; width: min(400px, 80%); height: auto; margin: 14px auto 2px; }
 
   .factline {
     display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center;
-    gap: 8px 18px; margin: -14px auto 22px; color: var(--cream);
+    gap: 8px 18px; margin: 16px auto 20px; color: var(--cream);
   }
   .factline .f { font-family: "Cormorant SC", Georgia, serif; font-weight: 600; font-size: clamp(1.05rem, 3.4vw, 1.5rem); letter-spacing: .03em; white-space: nowrap; }
   .factline .dot { color: var(--sage); font-size: 1.1rem; }
@@ -250,19 +248,21 @@
 
 <!-- ===== BEFORE THE SHOW ===== -->
 <header class="hero before">
-  <div class="frame">
-    <div class="snow" aria-hidden="true">
-      <img class="s1" src="img/snowflake.png" alt="">
-      <img class="s2" src="img/snowflake.png" alt="">
-      <img class="s3" src="img/snowflake.png" alt="">
-      <img class="s4" src="img/snowflake.png" alt="">
-      <img class="s5" src="img/snowflake.png" alt="">
-      <img class="s6" src="img/snowflake.png" alt="">
-    </div>
+  <div class="snow" aria-hidden="true">
+    <img class="s1" src="img/snowflake.png" alt="">
+    <img class="s2" src="img/snowflake.png" alt="">
+    <img class="s3" src="img/snowflake.png" alt="">
+    <img class="s4" src="img/snowflake.png" alt="">
+    <img class="s5" src="img/snowflake.png" alt="">
+    <img class="s6" src="img/snowflake.png" alt="">
+    <img class="s7" src="img/snowflake.png" alt="">
+    <img class="s8" src="img/snowflake.png" alt="">
+  </div>
+  <div class="hero-inner">
     <p class="eyebrow">Vocal Standard &amp; Central Standard present</p>
-    <img class="wordmark" src="img/wordmark.png" width="1200" height="811"
+    <img class="wordmark" src="img/wordmark.png" width="871" height="502"
          alt="Holiday Harmonies — An A Cappella Show">
-    <img class="swag" src="img/swag.png" width="1200" height="762" alt="" aria-hidden="true">
+    <img class="swag" src="img/swag.png" width="874" height="356" alt="" aria-hidden="true">
     <div class="factline">
       <span class="f">Saturday, December 12, 2026</span>
       <span class="dot">&bull;</span>
@@ -357,7 +357,7 @@
 <!-- ===== AFTER THE SHOW ===== -->
 <div class="after">
   <div class="thanks">
-    <img class="wordmark" src="img/wordmark.png" width="1200" height="811" alt="Holiday Harmonies">
+    <img class="wordmark" src="img/wordmark.png" width="871" height="502" alt="Holiday Harmonies">
     <h2>Thank you for a wonderful season!</h2>
     <p class="lead">We hope you enjoyed the show. See you next December &mdash; follow the choruses for news of next year's performance.</p>
     <div class="links" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
