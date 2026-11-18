@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//standardchristmas.com//Holiday Harmonies 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hh2026-matinee@standardchristmas.com
+DTSTAMP:20261117T000000Z
+DTSTART:20261212T203000Z
+DTEND:20261212T223000Z
+SUMMARY:Holiday Harmonies 2026 (Matinee) - Central Standard & Vocal Standard
+LOCATION:The Folly Theater, 300 W 12th St, Kansas City, MO 64105
+DESCRIPTION:A cappella holiday show with Central Standard and Vocal Standard. Tickets: https://follytheater.org/event/holiday-harmonies-2026/
+URL:https://standardchristmas.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:hh2026-evening@standardchristmas.com
+DTSTAMP:20261117T000000Z
+DTSTART:20261213T010000Z
+DTEND:20261213T030000Z
+SUMMARY:Holiday Harmonies 2026 (Evening) - Central Standard & Vocal Standard
+LOCATION:The Folly Theater, 300 W 12th St, Kansas City, MO 64105
+DESCRIPTION:A cappella holiday show with Central Standard and Vocal Standard. Tickets: https://follytheater.org/event/holiday-harmonies-2026/
+URL:https://standardchristmas.com/
+END:VEVENT
+END:VCALENDAR

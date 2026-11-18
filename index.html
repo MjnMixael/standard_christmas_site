@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Holiday Harmonies 2026 | Central Standard &amp; Vocal Standard</title>
-<meta name="description" content="Central Standard and Vocal Standard present Holiday Harmonies, an a cappella holiday show. Saturday, December 12, 2026 at the Folly Theater in Kansas City. 2:30 PM &amp; 7:00 PM.">
+<meta name="description" content="Central Standard and Vocal Standard present Holiday Harmonies, an a cappella holiday show. Saturday, December 12, 2026 at the Folly Theater in Kansas City. 2:30 PM &amp; 7:00 PM. Get tickets at standardchristmas.com.">
 <link rel="canonical" href="https://standardchristmas.com/">
 <link rel="icon" href="/favicon.ico">
+<meta name="theme-color" content="#2b362e">
 
 <!-- Link previews (Facebook, iMessage, etc.) -->
 <meta property="og:type" content="website">
@@ -14,20 +15,100 @@
 <meta property="og:title" content="Holiday Harmonies 2026 — Dec 12 at the Folly Theater">
 <meta property="og:description" content="Central Standard &amp; Vocal Standard's annual a cappella holiday show. 2:30 PM &amp; 7:00 PM. Get tickets.">
 <meta property="og:image" content="https://standardchristmas.com/img/banner.jpg">
+<meta property="og:image:width" content="2658">
+<meta property="og:image:height" content="984">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Holiday Harmonies 2026 — Dec 12 at the Folly Theater">
+<meta name="twitter:description" content="Central Standard &amp; Vocal Standard's annual a cappella holiday show. 2:30 PM &amp; 7:00 PM. Get tickets.">
+<meta name="twitter:image" content="https://standardchristmas.com/img/banner.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Event data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TheaterEvent",
+      "name": "Holiday Harmonies 2026 — Matinee",
+      "startDate": "2026-12-12T14:30:00-06:00",
+      "endDate": "2026-12-12T16:30:00-06:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "Central Standard and Vocal Standard present Holiday Harmonies, an a cappella holiday show. Matinee performance.",
+      "image": "https://standardchristmas.com/img/banner.jpg",
+      "performer": [
+        { "@type": "MusicGroup", "name": "Central Standard" },
+        { "@type": "MusicGroup", "name": "Vocal Standard" }
+      ],
+      "location": {
+        "@type": "Place",
+        "name": "The Folly Theater",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "300 W 12th St",
+          "addressLocality": "Kansas City",
+          "addressRegion": "MO",
+          "postalCode": "64105",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://follytheater.org/event/holiday-harmonies-2026/",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TheaterEvent",
+      "name": "Holiday Harmonies 2026 — Evening",
+      "startDate": "2026-12-12T19:00:00-06:00",
+      "endDate": "2026-12-12T21:00:00-06:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "Central Standard and Vocal Standard present Holiday Harmonies, an a cappella holiday show. Evening performance.",
+      "image": "https://standardchristmas.com/img/banner.jpg",
+      "performer": [
+        { "@type": "MusicGroup", "name": "Central Standard" },
+        { "@type": "MusicGroup", "name": "Vocal Standard" }
+      ],
+      "location": {
+        "@type": "Place",
+        "name": "The Folly Theater",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "300 W 12th St",
+          "addressLocality": "Kansas City",
+          "addressRegion": "MO",
+          "postalCode": "64105",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://follytheater.org/event/holiday-harmonies-2026/",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
 
 <style>
   :root {
-    --green: #3c4a40;
+    --green-deep: #222b25;
     --green-dark: #2b362e;
+    --green: #3c4a40;
+    --green-line: rgba(241,230,216,.14);
     --cream: #f1e6d8;
-    --cream-dim: #d9cbb8;
+    --cream-dim: #d3c4af;
     --red: #9c1c1c;
     --red-hover: #b52424;
+    --sage: #a7bd9c;
+    --maxw: 920px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -35,138 +116,249 @@
     margin: 0;
     background: var(--green-dark);
     color: var(--cream);
-    font: 400 1.0625rem/1.6 Lato, system-ui, sans-serif;
+    font: 400 1.0625rem/1.65 Lato, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   a { color: var(--cream); }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-  header { background: var(--green); padding: 16px 0 28px; text-align: center; }
-  header img.banner { display: block; width: 100%; height: auto; max-width: 1100px; margin: 0 auto; border-radius: 8px; }
-  h1, h2 { font-family: "Cormorant SC", Georgia, serif; font-weight: 700; line-height: 1.15; }
-  h1 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); margin: 20px 0 4px; }
-  .sub { color: var(--cream-dim); margin: 0 0 20px; }
+  .display { font-family: "Cormorant SC", Georgia, serif; font-weight: 700; line-height: 1.12; letter-spacing: .01em; }
+  .eyebrow {
+    font-family: "Cormorant SC", Georgia, serif;
+    font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--cream-dim); font-size: clamp(.85rem, 2.6vw, 1.05rem); margin: 0;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { position: relative; background: var(--green-deep); padding: 30px 16px 44px; text-align: center; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("img/snowflakes.png") center top / cover no-repeat;
+    opacity: .22; pointer-events: none;
+  }
+  .frame {
+    position: relative;
+    max-width: var(--maxw); margin: 0 auto;
+    border: 1.5px solid rgba(241,230,216,.45);
+    border-radius: 10px;
+    padding: 34px 22px 30px;
+    background: linear-gradient(180deg, rgba(43,54,46,.35), rgba(34,43,37,.55));
+  }
+  .hero .wordmark {
+    display: block; width: min(560px, 86%); height: auto; margin: 14px auto 2px;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,.45));
+  }
+  .hero .swag { display: block; width: min(640px, 100%); height: auto; margin: 6px auto 20px; }
+
+  .factline {
+    display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 8px 18px; margin: 4px auto 26px; color: var(--cream);
+  }
+  .factline .f { font-family: "Cormorant SC", Georgia, serif; font-weight: 600; font-size: clamp(1.05rem, 3.4vw, 1.5rem); letter-spacing: .03em; white-space: nowrap; }
+  .factline .dot { color: var(--sage); font-size: 1.1rem; }
 
   .btn {
-    display: inline-block;
-    background: var(--red);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: .02em;
-    padding: 16px 40px;
-    border-radius: 999px;
-    box-shadow: 0 4px 14px rgba(0,0,0,.35);
-    transition: background .15s, transform .15s;
+    display: inline-block; background: var(--red); color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 1.2rem; letter-spacing: .03em;
+    padding: 16px 44px; border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.4); transition: background .15s, transform .15s;
   }
-  .btn:hover, .btn:focus-visible { background: var(--red-hover); transform: translateY(-1px); }
+  .btn:hover, .btn:focus-visible { background: var(--red-hover); transform: translateY(-2px); }
   .btn:focus-visible { outline: 3px solid var(--cream); outline-offset: 3px; }
-  .official { font-size: .9rem; color: var(--cream-dim); margin: 12px 0 0; }
+  .official { font-size: .9rem; color: var(--cream-dim); margin: 14px 0 0; }
+  .official a { color: var(--cream-dim); }
 
-  section { padding: 36px 0; border-top: 1px solid rgba(241,230,216,.12); }
-  h2 { font-size: 1.75rem; margin: 0 0 16px; }
+  /* ---------- SECTIONS ---------- */
+  main { position: relative; }
+  section { padding: 46px 0; border-top: 1px solid var(--green-line); }
+  section:first-child { border-top: 0; }
+  h2 { font-family: "Cormorant SC", Georgia, serif; font-weight: 700; font-size: clamp(1.6rem, 5vw, 2.15rem); margin: 0 0 6px; text-align: center; }
+  .lead { text-align: center; color: var(--cream-dim); max-width: 640px; margin: 0 auto 26px; }
 
-  .shows { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .card { background: var(--green); border-radius: 10px; padding: 20px; }
-  .card .time { font-family: "Cormorant SC", Georgia, serif; font-size: 1.6rem; font-weight: 700; margin: 0; }
-  .card p { margin: 6px 0 0; }
-
-  .scam {
-    background: rgba(156,28,28,.18);
-    border-left: 4px solid var(--red);
-    padding: 14px 18px;
-    border-radius: 6px;
+  .shows { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--green); border: 1px solid var(--green-line); border-radius: 14px;
+    padding: 24px 22px; text-align: center;
   }
+  .card .time { font-family: "Cormorant SC", Georgia, serif; font-size: 1.9rem; font-weight: 700; margin: 0; }
+  .card .tag { display: inline-block; margin: 8px 0 14px; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--green-deep); background: var(--sage); padding: 3px 12px; border-radius: 999px; font-weight: 700; }
+  .card p.guest { margin: 0; color: var(--cream-dim); }
+  .card p.guest strong { color: var(--cream); }
+
+  .prose { max-width: 680px; margin: 0 auto; }
+  .prose p { margin: 0 0 16px; }
+  .prose p:last-child { margin-bottom: 0; }
+
+  .toy { background: var(--green); border: 1px solid var(--green-line); border-radius: 14px; padding: 26px 24px; max-width: 680px; margin: 0 auto; text-align: center; }
+  .toy h2 { margin-top: 0; }
+
+  .venue { text-align: center; }
+  .venue .addr { font-size: 1.15rem; line-height: 1.5; }
+  .venue .links { margin-top: 16px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .pill { display: inline-block; border: 1.5px solid rgba(241,230,216,.5); color: var(--cream); text-decoration: none; padding: 9px 20px; border-radius: 999px; font-weight: 700; font-size: .95rem; transition: background .15s, border-color .15s; }
+  .pill:hover { background: rgba(241,230,216,.1); border-color: var(--cream); }
+
+  .scam { background: rgba(156,28,28,.2); border: 1px solid rgba(156,28,28,.6); border-left: 5px solid var(--red); padding: 18px 22px; border-radius: 10px; max-width: 720px; margin: 0 auto; }
   .scam strong { color: #fff; }
 
-  footer { text-align: center; padding: 36px 0 110px; color: var(--cream-dim); font-size: .9rem; }
+  .choruses { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .chorus { background: var(--green); border: 1px solid var(--green-line); border-radius: 14px; padding: 26px 22px; text-align: center; }
+  .chip {
+    width: 150px; height: 104px; margin: 0 auto 16px; border-radius: 12px;
+    background: var(--cream); display: flex; align-items: center; justify-content: center; padding: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.28);
+  }
+  .chip img { max-width: 100%; max-height: 100%; height: auto; display: block; }
+  .chorus h3 { font-family: "Cormorant SC", Georgia, serif; font-weight: 700; font-size: 1.5rem; margin: 0 0 8px; }
+  .chorus p { color: var(--cream-dim); margin: 0 0 16px; }
+  .chorus .pill { font-size: .9rem; padding: 8px 18px; }
 
-  /* Sticky ticket bar on phones */
+  footer { text-align: center; padding: 40px 20px 120px; color: var(--cream-dim); font-size: .9rem; border-top: 1px solid var(--green-line); }
+  footer a { color: var(--cream-dim); }
+  footer .flakes { font-size: 1.1rem; letter-spacing: .4em; color: var(--sage); opacity: .7; }
+
+  /* ---------- Sticky mobile ticket bar ---------- */
   .sticky {
-    position: fixed; left: 0; right: 0; bottom: 0;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    background: rgba(43,54,46,.96);
-    border-top: 1px solid rgba(241,230,216,.15);
-    text-align: center;
+    background: rgba(34,43,37,.97); border-top: 1px solid rgba(241,230,216,.16);
+    text-align: center; backdrop-filter: blur(4px);
   }
   .sticky .btn { display: block; padding: 14px; font-size: 1.1rem; }
-  @media (min-width: 720px) { .sticky { display: none; } footer { padding-bottom: 36px; } }
+  @media (min-width: 760px) { .sticky { display: none; } footer { padding-bottom: 40px; } }
 
-  /* After the show */
+  /* ---------- After the show ---------- */
   .after { display: none; }
   body.past .before { display: none; }
   body.past .after { display: block; }
+  .thanks { text-align: center; padding: 60px 20px; }
+  .thanks .wordmark { display: block; width: min(460px, 82%); height: auto; margin: 0 auto 24px; }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <img class="banner" src="img/banner.jpg" width="2658" height="984"
-         alt="Vocal Standard &amp; Central Standard present Holiday Harmonies, an a cappella show. 2:30 PM and 7:00 PM, December 12, 2026, The Folly Theater, Kansas City, Missouri.">
-    <div class="before">
-      <h1>Holiday Harmonies 2026</h1>
-      <p class="sub">Saturday, December 12 &middot; Folly Theater, Kansas City</p>
+<!-- ===== BEFORE THE SHOW ===== -->
+<header class="hero before">
+  <div class="frame">
+    <p class="eyebrow">Vocal Standard &amp; Central Standard present</p>
+    <img class="wordmark" src="img/wordmark.png" width="1200" height="811"
+         alt="Holiday Harmonies — An A Cappella Show">
+    <img class="swag" src="img/swag.png" width="1200" height="762" alt="" aria-hidden="true">
+    <div class="factline">
+      <span class="f">Saturday, December 12, 2026</span>
+      <span class="dot">&bull;</span>
+      <span class="f">2:30 &amp; 7:00 PM</span>
+      <span class="dot">&bull;</span>
+      <span class="f">The Folly Theater</span>
+    </div>
+    <div>
       <a class="btn" href="https://follytheater.org/event/holiday-harmonies-2026/">Buy Tickets</a>
-      <p class="official">Official tickets are sold only through the Folly Theater.</p>
     </div>
-    <div class="after">
-      <h1>Thank you for a wonderful season!</h1>
-      <p class="sub">See you next December. Follow the choruses below for next year's show.</p>
-    </div>
+    <p class="official">Official tickets are sold only through <a href="https://follytheater.org/event/holiday-harmonies-2026/">the Folly Theater</a>.</p>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="before">
-    <h2>Two shows, one magical day</h2>
-    <div class="shows">
-      <div class="card">
-        <p class="time">2:30 PM Matinee</p>
-        <p>Special guest <strong>Summit Lakes Middle School</strong></p>
+<main class="before">
+  <div class="wrap">
+
+    <section>
+      <h2>Two shows, one magical day</h2>
+      <p class="lead">Join us at the historic Folly Theater for an afternoon or evening of a cappella holiday harmony.</p>
+      <div class="shows">
+        <div class="card">
+          <p class="time">2:30 PM</p>
+          <span class="tag">Matinee</span>
+          <p class="guest">With special guest<br><strong>Summit Lakes Middle School</strong></p>
+        </div>
+        <div class="card">
+          <p class="time">7:00 PM</p>
+          <span class="tag">Evening</span>
+          <p class="guest">With special guest<br><strong>Olathe East High School</strong></p>
+        </div>
       </div>
-      <div class="card">
-        <p class="time">7:00 PM Evening</p>
-        <p>Special guest <strong>Olathe East High School</strong></p>
+      <p class="lead" style="margin-top:24px;">
+        <a class="pill" href="events.ics">&#128197; Add to calendar</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>A cappella, all season long</h2>
+      <div class="prose">
+        <p>Central Standard and Vocal Standard, two internationally acclaimed barbershop choruses, come together each December for their annual holiday show. Expect rich four-part harmony, a festive mix of secular and sacred favorites, and several chapter quartets along the way.</p>
+        <p>It's an afternoon &mdash; and evening &mdash; the whole family will love, in one of Kansas City's most beloved historic theaters.</p>
       </div>
-    </div>
-    <p>Join Central Standard and Vocal Standard, two internationally acclaimed barbershop choruses, for their annual holiday show at the historic Folly Theater. Both shows also feature several chapter quartets and a festive mix of secular and sacred holiday music the whole family will love.</p>
-  </section>
+    </section>
 
-  <section class="before">
-    <h2>Bring a toy, brighten a holiday</h2>
-    <p>We're collecting new, unwrapped toys in their original packaging for <strong>KVC's Holiday Heroes</strong> toy drive. Drop them off when you arrive.</p>
-  </section>
+    <section>
+      <div class="toy">
+        <h2>Bring a toy, brighten a holiday</h2>
+        <p>We're collecting new, unwrapped toys in their original packaging for <strong>KVC's Holiday Heroes</strong> toy drive. Bring one with you and drop it off when you arrive.</p>
+      </div>
+    </section>
 
-  <section class="before">
-    <h2>The venue</h2>
-    <p>Folly Theater<br>300 W 12th St., Kansas City, MO 64105<br>
-      <a href="https://maps.google.com/?q=Folly+Theater+300+W+12th+St+Kansas+City+MO">Get directions</a></p>
-  </section>
+    <section class="venue">
+      <h2>The venue</h2>
+      <p class="addr">The Folly Theater<br>300 W 12th St, Kansas City, MO 64105</p>
+      <div class="links">
+        <a class="pill" href="https://maps.google.com/?q=Folly+Theater+300+W+12th+St+Kansas+City+MO+64105">Get directions</a>
+        <a class="pill" href="https://follytheater.org/">Folly Theater website</a>
+      </div>
+    </section>
 
-  <section class="before">
-    <div class="scam">
-      <strong>Beware of ticket scams.</strong> Buy tickets only through the Folly Theater website using the button on this page. Do not buy from third-party sites.
-    </div>
-  </section>
+    <section>
+      <div class="scam">
+        <p style="margin:0;"><strong>Beware of ticket scams.</strong> Buy tickets only through the Folly Theater, using the button on this page. Do not buy from third-party resellers or links sent to you &mdash; if it isn't the Folly, it isn't official.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>The choruses</h2>
-    <p><a href="https://centralstandard.net"><strong>Central Standard</strong></a>, Kansas City's six-time international medalist men's barbershop chorus.</p>
-    <p><a href="https://www.vocalstandard.com"><strong>Vocal Standard</strong></a>, award-winning women's a cappella chorus and Central Standard's sister chorus.</p>
-  </section>
+    <section>
+      <h2>The choruses</h2>
+      <p class="lead">Two choruses, one stage &mdash; sisters in song.</p>
+      <div class="choruses">
+        <div class="chorus">
+          <div class="chip"><img src="img/cs-logo.png" width="429" height="546" alt="Central Standard logo"></div>
+          <h3>Central Standard</h3>
+          <p>Kansas City's six-time international medalist men's barbershop chorus.</p>
+          <a class="pill" href="https://centralstandard.net">Visit centralstandard.net</a>
+        </div>
+        <div class="chorus">
+          <div class="chip"><img src="img/vs-logo.png" width="305" height="160" alt="Vocal Standard logo"></div>
+          <h3>Vocal Standard</h3>
+          <p>A Sweet Adelines International women's chorus and 7th&#8209;place international medalist &mdash; Central Standard's sister chorus.</p>
+          <a class="pill" href="https://www.vocalstandard.com">Visit vocalstandard.com</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </main>
 
+<!-- ===== AFTER THE SHOW ===== -->
+<div class="after">
+  <div class="thanks">
+    <img class="wordmark" src="img/wordmark.png" width="1200" height="811" alt="Holiday Harmonies">
+    <h2>Thank you for a wonderful season!</h2>
+    <p class="lead">We hope you enjoyed the show. See you next December &mdash; follow the choruses for news of next year's performance.</p>
+    <div class="links" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a class="pill" href="https://centralstandard.net">Central Standard</a>
+      <a class="pill" href="https://www.vocalstandard.com">Vocal Standard</a>
+    </div>
+  </div>
+</div>
+
 <footer>
-  &copy; <span id="yr">2026</span> Central Standard &amp; Vocal Standard
+  <p class="flakes">&#10052; &#10052; &#10052;</p>
+  <p>&copy; <span id="yr">2026</span> Central Standard &amp; Vocal Standard<br>
+     Official tickets only at <a href="https://standardchristmas.com">standardchristmas.com</a></p>
 </footer>
 
 <div class="sticky before">
-  <a class="btn" href="https://follytheater.org/event/holiday-harmonies-2026/">Buy Tickets</a>
+  <a class="btn" href="https://follytheater.org/event/holiday-harmonies-2026/">Buy Tickets &mdash; Dec 12</a>
 </div>
 
 <script>
-  // Switch to the "thank you" message once the show is over (midnight after Dec 12, Central time).
+  // Switch to the "thank you" message once the show is over (midnight after Dec 12, Central time = 06:00 UTC Dec 13).
   if (Date.now() > Date.parse("2026-12-13T06:00:00Z")) document.body.classList.add("past");
   document.getElementById("yr").textContent = new Date().getFullYear();
 </script>
