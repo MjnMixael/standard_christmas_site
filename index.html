@@ -101,7 +101,8 @@
 
 <style>
   :root {
-    --green-deep: #222b26;   /* hero base (dark, textured) */
+    --green-deep: #222b26;   /* dark green (tag text) */
+    --hero-bg: #41453c;      /* hero base: olive, matched to flyer */
     --green-body: #37433a;   /* page base (lighter, textured) */
     --green-dark: #2b362e;
     --green: #46534a;        /* cards / panels */
@@ -137,11 +138,11 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero { position: relative; background-color: var(--green-deep); background-image: var(--tex); background-repeat: repeat; padding: 28px 16px 32px; text-align: center; overflow: hidden; }
+  .hero { position: relative; background-color: var(--hero-bg); background-image: var(--tex); background-repeat: repeat; padding: 28px 16px 32px; text-align: center; overflow: hidden; }
   .hero-inner { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; }
   /* Full-width scattered background snowflakes */
   .snow { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-  .snow img { position: absolute; filter: brightness(1.75); opacity: .48; }
+  .snow img { position: absolute; filter: brightness(0.6); opacity: .5; }
   .snow .s1 { top: -24px;    left: 2%;    width: 150px; opacity: .5; }
   .snow .s2 { top: 10px;     right: 2%;   width: 150px; opacity: .5; }
   .snow .s3 { top: 32%;      left: 11%;   width: 108px; opacity: .4; }
