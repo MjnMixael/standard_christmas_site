@@ -101,22 +101,26 @@
 
 <style>
   :root {
-    --green-deep: #222b25;
+    --green-deep: #222b26;   /* hero base (dark, textured) */
+    --green-body: #37433a;   /* page base (lighter, textured) */
     --green-dark: #2b362e;
-    --green: #3c4a40;
+    --green: #46534a;        /* cards / panels */
     --green-line: rgba(241,230,216,.14);
     --cream: #f1e6d8;
     --cream-dim: #d3c4af;
     --red: #9c1c1c;
     --red-hover: #b52424;
     --sage: #a7bd9c;
+    --tex: url("img/texture.png");
     --maxw: 920px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--green-dark);
+    background-color: var(--green-body);
+    background-image: var(--tex);
+    background-repeat: repeat;
     color: var(--cream);
     font: 400 1.0625rem/1.65 Lato, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -133,7 +137,7 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero { position: relative; background: var(--green-deep); padding: 28px 16px 32px; text-align: center; overflow: hidden; }
+  .hero { position: relative; background-color: var(--green-deep); background-image: var(--tex); background-repeat: repeat; padding: 28px 16px 32px; text-align: center; overflow: hidden; }
   .hero-inner { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; }
   /* Full-width scattered background snowflakes */
   .snow { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
